@@ -36,7 +36,7 @@ export default {
         }
       },
       registerForest(){
-        const uri = process.env.SERVER_ADDRESS + process.env.USER_SERVICE_PORT + '/api/registerForest'
+        const uri = process.env.SERVER_ADDRESS.toString() + process.env.USER_SERVICE_PORT.toString() + '/api/registerForest'
         let msgApi = this.$store.state.user
         msgApi.forestCode = this.forestCode
 

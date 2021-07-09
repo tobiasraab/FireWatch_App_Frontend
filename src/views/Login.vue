@@ -37,7 +37,7 @@ export default {
   },
   mounted () {
     if(this.$store.state.user){
-      const uri = process.env.SERVER_ADDRESS + process.env.USER_SERVICE_PORT + '/api/closeSession'
+      const uri = process.env.SERVER_ADDRESS.toString() + process.env.USER_SERVICE_PORT.toString() + '/api/closeSession'
       let data = {
         token: this.$store.state.user.token,
         email: this.$store.state.user.email
@@ -70,7 +70,7 @@ export default {
         email: this.email,
         password: this.password
       }
-      const uri = process.env.SERVER_ADDRESS + process.env.USER_SERVICE_PORT + '/api/login'
+      const uri = process.env.SERVER_ADDRESS.toString() + process.env.USER_SERVICE_PORT.toString() + '/api/login'
       axios.post(uri, userData)
         .then((response) => {
           if(response.data.success === true){

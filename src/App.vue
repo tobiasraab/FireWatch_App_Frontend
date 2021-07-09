@@ -37,7 +37,7 @@
     methods: {
       callPresence(){
         if(this.$store.state.user != undefined){
-          const uri = process.env.SERVER_ADDRESS + process.env.USER_SERVICE_PORT + '/api/callPresence'
+          const uri = process.env.SERVER_ADDRESS.toString() + process.env.USER_SERVICE_PORT.toString() + '/api/callPresence'
           let data = {
             token: this.$store.state.user.token,
             email: this.$store.state.user.email
