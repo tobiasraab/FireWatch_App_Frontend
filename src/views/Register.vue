@@ -51,7 +51,7 @@ export default {
   },
   mounted(){
     if(this.$store.state.user){
-      const uri = process.env.USER_SERVER_ADDRESS.toString() + process.env.USER_SERVICE_PORT.toString() + '/api/closeSession'
+      const uri = 'http://firewatch_userservice.ds.ava.hfg.design:3000/api/closeSession'
       let data = {
         token: this.$store.state.user.token,
         email: this.$store.state.user.email
@@ -128,7 +128,7 @@ export default {
             password: this.password
           }
           if(this.email != "" && this.password != "" && this.username != "" && document.querySelector("#eMailRegister").value.match(regExp)){
-            const uri = process.env.USER_SERVER_ADDRESS.toString() + process.env.USER_SERVICE_PORT.toString() + '/api/register'
+            const uri = 'http://firewatch_userservice.ds.ava.hfg.design:3000/api/register'
             axios.post(uri, userData)
               .then((response) => {
                 console.log(response)

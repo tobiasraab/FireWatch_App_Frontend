@@ -37,7 +37,7 @@
     methods: {
       callPresence(){
         if(this.$store.state.user != undefined){
-          const uri = process.env.USER_SERVER_ADDRESS.toString() + process.env.USER_SERVICE_PORT.toString() + '/api/callPresence'
+          const uri = 'http://firewatch_userservice.ds.ava.hfg.design:3000/api/callPresence'
           let data = {
             token: this.$store.state.user.token,
             email: this.$store.state.user.email

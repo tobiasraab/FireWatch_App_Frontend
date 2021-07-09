@@ -37,7 +37,7 @@ export default {
   },
   mounted () {
     if(this.$store.state.user){
-      const uri = process.env.USER_SERVER_ADDRESS.toString() + process.env.USER_SERVICE_PORT.toString() + '/api/closeSession'
+      const uri = 'http://firewatch_userservice.ds.ava.hfg.design:3000/api/closeSession'
       let data = {
         token: this.$store.state.user.token,
         email: this.$store.state.user.email
@@ -70,7 +70,7 @@ export default {
         email: this.email,
         password: this.password
       }
-      const uri = process.env.USER_SERVER_ADDRESS.toString() + process.env.USER_SERVICE_PORT.toString() + '/api/login'
+      const uri ='http://firewatch_userservice.ds.ava.hfg.design:3000/api/login'
       axios.post(uri, userData)
         .then((response) => {
           if(response.data.success === true){

@@ -36,7 +36,7 @@ export default {
         }
       },
       registerForest(){
-        const uri = process.env.USER_SERVER_ADDRESS.toString() + process.env.USER_SERVICE_PORT.toString() + '/api/registerForest'
+        const uri = 'http://firewatch_userservice.ds.ava.hfg.design:3000/api/registerForest'
         let msgApi = this.$store.state.user
         msgApi.forestCode = this.forestCode
 
