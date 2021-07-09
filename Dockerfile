@@ -19,7 +19,7 @@ COPY . .
 RUN npm run build
 
 # Network / reverse proxy config
-LABEL traefik.http.routers.firewatch_frontend.rule="Host(`firewatch_forntend.ds.ava.hfg.design`)"
+LABEL traefik.http.routers.firewatch_frontend.rule="Host(`firewatch_frontend.ds.ava.hfg.design`)"
 
 EXPOSE 8080
 CMD [ "http-server", "dist" ]
