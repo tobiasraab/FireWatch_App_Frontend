@@ -63,7 +63,7 @@
     methods: {
       getWeatherData: function () {
         console.log("get weather data")
-        const uri = process.env.SERVER_ADDRESS + process.env.DATA_SERVICE_PORT + '/api/weather'
+        const uri = process.env.DATA_SERVER_ADDRESS + process.env.DATA_SERVICE_PORT + '/api/weather'
         let data = {
           forestId: this.$store.state.forest._id,
           token: this.$store.state.user.token,

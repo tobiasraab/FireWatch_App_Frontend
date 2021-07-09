@@ -77,7 +77,7 @@ export default {
       },
       getAllSensorData() {
         if(this.$store.state.user.forest){
-          const uri = process.env.SERVER_ADDRESS.toString() + process.env.DATA_SERVICE_PORT.toString() + '/api/sensorData'
+          const uri = process.env.DATA_SERVER_ADDRESS.toString() + process.env.DATA_SERVICE_PORT.toString() + '/api/sensorData'
           let data = {
             forestId: this.$store.state.forest._id,
             token: this.$store.state.user.token,
